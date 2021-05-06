@@ -204,97 +204,20 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR0107
 U 1 1 6096A353
-P 1350 2200
-F 0 "#PWR0107" H 1350 2050 50  0001 C CNN
-F 1 "+5V" H 1365 2373 50  0000 C CNN
-F 2 "" H 1350 2200 50  0001 C CNN
-F 3 "" H 1350 2200 50  0001 C CNN
-	1    1350 2200
+P 4450 2150
+F 0 "#PWR0107" H 4450 2000 50  0001 C CNN
+F 1 "+5V" H 4465 2323 50  0000 C CNN
+F 2 "" H 4450 2150 50  0001 C CNN
+F 3 "" H 4450 2150 50  0001 C CNN
+	1    4450 2150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 2300 1350 2300
+	5400 2250 4450 2250
 Wire Wire Line
-	1350 2300 1350 2200
-$Comp
-L Device:Crystal_GND24_Small Y1
-U 1 1 6096B66B
-P 1750 1800
-F 0 "Y1" V 1704 1944 50  0000 L CNN
-F 1 "16MHz" V 1795 1944 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 1750 1800 50  0001 C CNN
-F 3 "~" H 1750 1800 50  0001 C CNN
-	1    1750 1800
-	0    1    1    0   
-$EndComp
+	4450 2250 4450 2150
 Wire Wire Line
-	1750 1700 2300 1700
-Wire Wire Line
-	2300 1900 1750 1900
-Wire Wire Line
-	1850 1800 1850 2000
-Wire Wire Line
-	1850 2000 1650 2000
-Wire Wire Line
-	1650 2000 1650 1950
-$Comp
-L Device:C_Small C1
-U 1 1 609702A9
-P 1000 1700
-F 0 "C1" V 771 1700 50  0000 C CNN
-F 1 "22pF" V 862 1700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1000 1700 50  0001 C CNN
-F 3 "~" H 1000 1700 50  0001 C CNN
-	1    1000 1700
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 6097131C
-P 1000 2050
-F 0 "C2" V 771 2050 50  0000 C CNN
-F 1 "22pF" V 862 2050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1000 2050 50  0001 C CNN
-F 3 "~" H 1000 2050 50  0001 C CNN
-	1    1000 2050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1750 1700 1100 1700
-Connection ~ 1750 1700
-Wire Wire Line
-	1750 1900 1100 1900
-Wire Wire Line
-	1100 1900 1100 2050
-Connection ~ 1750 1900
-$Comp
-L power:GND #PWR0108
-U 1 1 609745A9
-P 900 2250
-F 0 "#PWR0108" H 900 2000 50  0001 C CNN
-F 1 "GND" H 905 2077 50  0000 C CNN
-F 2 "" H 900 2250 50  0001 C CNN
-F 3 "" H 900 2250 50  0001 C CNN
-	1    900  2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	900  1700 900  2050
-Connection ~ 900  2050
-Wire Wire Line
-	900  2050 900  2200
-Wire Wire Line
-	1650 1950 1150 1950
-Wire Wire Line
-	1150 1950 1150 2200
-Connection ~ 1650 1950
-Wire Wire Line
-	1650 1950 1650 1800
-Wire Wire Line
-	1150 2200 900  2200
-Connection ~ 900  2200
-Wire Wire Line
-	900  2200 900  2250
+	4950 1950 4750 1950
 $Comp
 L Switch:SW_Push SW1
 U 1 1 60977267
@@ -481,7 +404,7 @@ Text GLabel 3500 1900 2    50   Input ~ 0
 COL1
 Text GLabel 3500 2000 2    50   Input ~ 0
 COL0
-Text GLabel 3500 2100 2    50   Input ~ 0
+Text GLabel 3600 2100 2    50   Input ~ 0
 ROW1
 Text GLabel 3500 3400 2    50   Input ~ 0
 ROW0
@@ -3274,4 +3197,87 @@ F 3 "" H 5850 5500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5850 5150 5850 5500
+Wire Wire Line
+	4000 2150 4000 2200
+Connection ~ 4000 2150
+Wire Wire Line
+	4250 2150 4000 2150
+Wire Wire Line
+	4000 2000 4000 2150
+$Comp
+L power:GND #PWR0108
+U 1 1 609745A9
+P 4000 2200
+F 0 "#PWR0108" H 4000 1950 50  0001 C CNN
+F 1 "GND" H 4005 2027 50  0000 C CNN
+F 2 "" H 4000 2200 50  0001 C CNN
+F 3 "" H 4000 2200 50  0001 C CNN
+	1    4000 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 6097131C
+P 4100 2000
+F 0 "C2" V 3871 2000 50  0000 C CNN
+F 1 "22pF" V 3962 2000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4100 2000 50  0001 C CNN
+F 3 "~" H 4100 2000 50  0001 C CNN
+	1    4100 2000
+	0    1    1    0   
+$EndComp
+Connection ~ 4000 2000
+Wire Wire Line
+	4750 1900 4750 1750
+Connection ~ 4750 1900
+Wire Wire Line
+	4250 1900 4250 2150
+Wire Wire Line
+	4750 1900 4250 1900
+Wire Wire Line
+	4000 1650 4000 2000
+Wire Wire Line
+	4200 1850 4200 2000
+Wire Wire Line
+	4850 1850 4200 1850
+Wire Wire Line
+	4850 1650 4200 1650
+$Comp
+L Device:C_Small C1
+U 1 1 609702A9
+P 4100 1650
+F 0 "C1" V 3871 1650 50  0000 C CNN
+F 1 "22pF" V 3962 1650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4100 1650 50  0001 C CNN
+F 3 "~" H 4100 1650 50  0001 C CNN
+	1    4100 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4750 1950 4750 1900
+Wire Wire Line
+	4950 1750 4950 1950
+$Comp
+L Device:Crystal_GND24_Small Y1
+U 1 1 6096B66B
+P 4850 1750
+F 0 "Y1" V 4804 1894 50  0000 L CNN
+F 1 "16MHz" V 4895 1894 50  0000 L CNN
+F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 4850 1750 50  0001 C CNN
+F 3 "~" H 4850 1750 50  0001 C CNN
+	1    4850 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 1850 5350 1850
+Wire Wire Line
+	5250 1650 5350 1650
+Wire Wire Line
+	5250 1650 4850 1650
+Connection ~ 5250 1650
+Connection ~ 4850 1650
+Wire Wire Line
+	5250 1850 4850 1850
+Connection ~ 5250 1850
+Connection ~ 4850 1850
 $EndSCHEMATC

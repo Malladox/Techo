@@ -3280,4 +3280,15 @@ Wire Wire Line
 	5250 1850 4850 1850
 Connection ~ 5250 1850
 Connection ~ 4850 1850
+$Comp
+L Connector:Raspberry_Pi_2_3 J?
+U 1 1 60969EEE
+P 8850 3950
+F 0 "J?" H 8850 5431 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 8850 5340 50  0000 C CNN
+F 2 "" H 8850 3950 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 8850 3950 50  0001 C CNN
+	1    8850 3950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
