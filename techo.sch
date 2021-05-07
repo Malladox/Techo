@@ -54,36 +54,6 @@ Wire Wire Line
 Wire Wire Line
 	4000 3600 4300 3600
 $Comp
-L Device:R_Small R2
-U 1 1 6094A534
-P 1950 2500
-F 0 "R2" V 1754 2500 50  0000 C CNN
-F 1 "22" V 1845 2500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 1950 2500 50  0001 C CNN
-F 3 "~" H 1950 2500 50  0001 C CNN
-	1    1950 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R3
-U 1 1 6094B389
-P 1700 2600
-F 0 "R3" V 1504 2600 50  0000 C CNN
-F 1 "22" V 1595 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 1700 2600 50  0001 C CNN
-F 3 "~" H 1700 2600 50  0001 C CNN
-	1    1700 2600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2300 2500 2050 2500
-Wire Wire Line
-	2300 2600 1800 2600
-Wire Wire Line
-	1500 2500 1850 2500
-Wire Wire Line
-	1600 2600 1500 2600
-$Comp
 L Device:C_Small C3
 U 1 1 6094E121
 P 1750 2900
@@ -275,78 +245,6 @@ F 3 "" H 2250 900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2250 900  2250 1000
-Text GLabel 1500 2500 0    50   Input ~ 0
-D+
-Text GLabel 1500 2600 0    50   Input ~ 0
-D-
-$Comp
-L random-keyboard-parts:Molex-0548190589 USB1
-U 1 1 6097DBBA
-P 8900 1200
-F 0 "USB1" V 9437 1167 60  0000 C CNN
-F 1 "Molex-0548190589" V 9331 1167 60  0000 C CNN
-F 2 "random-keyboard-parts:Molex-0548190589" H 8900 1200 60  0001 C CNN
-F 3 "" H 8900 1200 60  0001 C CNN
-	1    8900 1200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VCC #PWR0111
-U 1 1 6098043C
-P 9550 1000
-F 0 "#PWR0111" H 9550 850 50  0001 C CNN
-F 1 "VCC" H 9567 1173 50  0000 C CNN
-F 2 "" H 9550 1000 50  0001 C CNN
-F 3 "" H 9550 1000 50  0001 C CNN
-	1    9550 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Polyfuse F1
-U 1 1 6098105B
-P 9950 1000
-F 0 "F1" V 9725 1000 50  0000 C CNN
-F 1 "500mA" V 9816 1000 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric" H 10000 800 50  0001 L CNN
-F 3 "~" H 9950 1000 50  0001 C CNN
-	1    9950 1000
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+5V #PWR0112
-U 1 1 60981543
-P 10350 1000
-F 0 "#PWR0112" H 10350 850 50  0001 C CNN
-F 1 "+5V" H 10365 1173 50  0000 C CNN
-F 2 "" H 10350 1000 50  0001 C CNN
-F 3 "" H 10350 1000 50  0001 C CNN
-	1    10350 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10100 1000 10350 1000
-Wire Wire Line
-	9550 1000 9800 1000
-Wire Wire Line
-	9550 1000 9200 1000
-Connection ~ 9550 1000
-Text GLabel 9200 1200 2    50   Input ~ 0
-D+
-Text GLabel 9200 1100 2    50   Input ~ 0
-D-
-$Comp
-L power:GND #PWR0113
-U 1 1 609872FD
-P 9300 1400
-F 0 "#PWR0113" H 9300 1150 50  0001 C CNN
-F 1 "GND" H 9305 1227 50  0000 C CNN
-F 2 "" H 9300 1400 50  0001 C CNN
-F 3 "" H 9300 1400 50  0001 C CNN
-	1    9300 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9200 1400 9300 1400
 $Comp
 L MX_Alps_Hybrid:MX-NoLED MX1
 U 1 1 6098928F
@@ -400,14 +298,6 @@ Wire Wire Line
 Connection ~ 7900 11400
 Wire Wire Line
 	7900 11400 7650 11400
-Text GLabel 3500 1900 2    50   Input ~ 0
-COL1
-Text GLabel 3500 2000 2    50   Input ~ 0
-COL0
-Text GLabel 3600 2100 2    50   Input ~ 0
-ROW1
-Text GLabel 3500 3400 2    50   Input ~ 0
-ROW0
 $Comp
 L MX_Alps_Hybrid:MX-NoLED MX14
 U 1 1 60ACB294
@@ -3280,15 +3170,155 @@ Wire Wire Line
 	5250 1850 4850 1850
 Connection ~ 5250 1850
 Connection ~ 4850 1850
+Wire Wire Line
+	9200 1400 9300 1400
 $Comp
-L Connector:Raspberry_Pi_2_3 J?
-U 1 1 60969EEE
-P 8850 3950
-F 0 "J?" H 8850 5431 50  0000 C CNN
-F 1 "Raspberry_Pi_2_3" H 8850 5340 50  0000 C CNN
-F 2 "" H 8850 3950 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 8850 3950 50  0001 C CNN
-	1    8850 3950
+L power:GND #PWR0113
+U 1 1 609872FD
+P 9300 1400
+F 0 "#PWR0113" H 9300 1150 50  0001 C CNN
+F 1 "GND" H 9305 1227 50  0000 C CNN
+F 2 "" H 9300 1400 50  0001 C CNN
+F 3 "" H 9300 1400 50  0001 C CNN
+	1    9300 1400
 	1    0    0    -1  
 $EndComp
+Text GLabel 9200 1100 2    50   Input ~ 0
+D-
+Text GLabel 9200 1200 2    50   Input ~ 0
+D+
+Wire Wire Line
+	10100 1000 10350 1000
+$Comp
+L power:+5V #PWR0112
+U 1 1 60981543
+P 10350 1000
+F 0 "#PWR0112" H 10350 850 50  0001 C CNN
+F 1 "+5V" H 10365 1173 50  0000 C CNN
+F 2 "" H 10350 1000 50  0001 C CNN
+F 3 "" H 10350 1000 50  0001 C CNN
+	1    10350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse F1
+U 1 1 6098105B
+P 9950 1000
+F 0 "F1" V 9725 1000 50  0000 C CNN
+F 1 "500mA" V 9816 1000 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 10000 800 50  0001 L CNN
+F 3 "~" H 9950 1000 50  0001 C CNN
+	1    9950 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 1000 9200 1000
+Wire Wire Line
+	9550 1000 9800 1000
+Connection ~ 9550 1000
+$Comp
+L power:VCC #PWR0111
+U 1 1 6098043C
+P 9550 1000
+F 0 "#PWR0111" H 9550 850 50  0001 C CNN
+F 1 "VCC" H 9567 1173 50  0000 C CNN
+F 2 "" H 9550 1000 50  0001 C CNN
+F 3 "" H 9550 1000 50  0001 C CNN
+	1    9550 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L random-keyboard-parts:Molex-0548190589 USB1
+U 1 1 6097DBBA
+P 8900 1200
+F 0 "USB1" V 9437 1167 60  0000 C CNN
+F 1 "Molex-0548190589" V 9331 1167 60  0000 C CNN
+F 2 "random-keyboard-parts:Molex-0548190589" H 8900 1200 60  0001 C CNN
+F 3 "" H 8900 1200 60  0001 C CNN
+	1    8900 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L random-keyboard-parts:Molex-0548190589 USB?
+U 1 1 60C89F17
+P 8950 4350
+F 0 "USB?" V 9487 4317 60  0000 C CNN
+F 1 "Molex-0548190589" V 9381 4317 60  0000 C CNN
+F 2 "random-keyboard-parts:Molex-0548190589" H 8950 4350 60  0001 C CNN
+F 3 "" H 8950 4350 60  0001 C CNN
+	1    8950 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 60CD4FC7
+P 8150 4550
+F 0 "#PWR?" H 8150 4400 50  0001 C CNN
+F 1 "VCC" H 8168 4723 50  0000 C CNN
+F 2 "" H 8150 4550 50  0001 C CNN
+F 3 "" H 8150 4550 50  0001 C CNN
+	1    8150 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8650 4550 8150 4550
+$Comp
+L Device:Fuse F?
+U 1 1 60CFD39F
+P 7850 4550
+F 0 "F?" V 7653 4550 50  0000 C CNN
+F 1 "500mA" V 7744 4550 50  0000 C CNN
+F 2 "" V 7780 4550 50  0001 C CNN
+F 3 "~" H 7850 4550 50  0001 C CNN
+	1    7850 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8150 4550 8000 4550
+Connection ~ 8150 4550
+$Comp
+L power:+5V #PWR?
+U 1 1 60D27519
+P 7550 4700
+F 0 "#PWR?" H 7550 4550 50  0001 C CNN
+F 1 "+5V" H 7565 4873 50  0000 C CNN
+F 2 "" H 7550 4700 50  0001 C CNN
+F 3 "" H 7550 4700 50  0001 C CNN
+	1    7550 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 4550 7700 4700
+Wire Wire Line
+	7700 4700 7550 4700
+Wire Wire Line
+	8650 4350 7500 4350
+Wire Wire Line
+	8650 4450 8300 4450
+$Comp
+L Device:R_Small R?
+U 1 1 60D9973F
+P 7400 4350
+F 0 "R?" V 7204 4350 50  0000 C CNN
+F 1 "22R" V 7295 4350 50  0000 C CNN
+F 2 "" H 7400 4350 50  0001 C CNN
+F 3 "~" H 7400 4350 50  0001 C CNN
+	1    7400 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 4350 6450 4350
+$Comp
+L Device:R_Small R?
+U 1 1 60D9AF2B
+P 8200 4450
+F 0 "R?" V 8004 4450 50  0000 C CNN
+F 1 "22R" V 8095 4450 50  0000 C CNN
+F 2 "" H 8200 4450 50  0001 C CNN
+F 3 "~" H 8200 4450 50  0001 C CNN
+	1    8200 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 4450 6450 4450
 $EndSCHEMATC
